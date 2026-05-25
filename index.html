@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steven Tolojanahary Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="dark">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#home" aria-label="Steven home">Steven<span>.</span></a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#home" data-route="home" data-nav-key="home">Home</a>
+          <a href="#services" data-route="services" data-nav-key="services">Services</a>
+          <a href="#resume" data-route="resume" data-nav-key="resume">Resume</a>
+          <a href="#work" data-route="work" data-nav-key="work">Work</a>
+          <a href="#blog" data-route="blog" data-nav-key="blog">Blog</a>
+          <a href="#contact" data-route="contact" data-nav-key="contact">Contact</a>
+          <a class="hire-link" href="#contact" data-route="contact" data-nav-key="contactMe">Contact me</a>
+        </nav>
+
+        <div class="header-tools" aria-label="Display controls">
+          <button class="lang-toggle" type="button" aria-label="Switch language">
+            <span data-lang-label>EN</span>
+          </button>
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.4A7.8 7.8 0 0 1 9.6 4a8 8 0 1 0 10.4 10.4Z" />
+            </svg>
+          </button>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#home" data-route="home" data-nav-key="home">Home</a>
+      <a href="#services" data-route="services" data-nav-key="services">Services</a>
+      <a href="#resume" data-route="resume" data-nav-key="resume">Resume</a>
+      <a href="#work" data-route="work" data-nav-key="work">Work</a>
+      <a href="#blog" data-route="blog" data-nav-key="blog">Blog</a>
+      <a href="#contact" data-route="contact" data-nav-key="contact">Contact</a>
+      <a class="hire-link" href="#contact" data-route="contact" data-nav-key="contactMe">Contact me</a>
+    </div>
+
+    <main id="app" class="page-shell" aria-live="polite"></main>
+
+    <template id="home-template">
+      <section class="page page-home">
+        <div class="container home-layout">
+          <div class="home-copy">
+            <p class="eyebrow" data-home="eyebrow"></p>
+            <h1><span data-home="titlePrefix"></span> <span data-home="titleName"></span></h1>
+            <p class="lead" data-home="lead"></p>
+
+            <div class="home-actions">
+              <a class="outline-button" href="assets/CV_Steven_TOLOJANAHARY.pdf" aria-label="Get my CV">
+                <span data-home="cvLabel"></span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" />
+                </svg>
+              </a>
+              <div class="social-list" aria-label="Social links">
+                <a href="https://www.linkedin.com/in/steven-tolojanahary-059647279/" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 11v7M8 8v.1M12 18v-7m0 3.5c0-2 1-3.5 3-3.5s3 1.4 3 3.5V18M4 18V6h16v12H4Z" />
+                  </svg>
+                </a>
+                <a href="mailto:llucsteven@gmail.com" aria-label="Email">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16v12H4V6Zm0 1 8 6 8-6" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M10 9.5 15 12l-5 2.5v-5Z" />
+                    <path d="M4 8.8C4.2 7.3 5.1 7 6.5 7h11c1.4 0 2.3.3 2.5 1.8.2 2.1.2 4.3 0 6.4-.2 1.5-1.1 1.8-2.5 1.8h-11c-1.4 0-2.3-.3-2.5-1.8a32.8 32.8 0 0 1 0-6.4Z" />
+                  </svg>
+                </a>
+                <a href="#contact" aria-label="Contact">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portrait-wrap" aria-hidden="true">
+            <img src="assets/photo.png" alt="" />
+          </div>
+
+          <div class="stats" data-home-stats></div>
+        </div>
+      </section>
+    </template>
+
+    <template id="services-template">
+      <section class="page page-services">
+        <div class="container services-grid" data-services></div>
+      </section>
+    </template>
+
+    <template id="resume-template">
+      <section class="page page-resume">
+        <div class="container resume-layout">
+          <aside class="resume-sidebar">
+            <h2 data-resume="sidebarTitle"></h2>
+            <p data-resume="sidebarText"></p>
+            <div class="resume-actions">
+              <a class="tree-life-button" href="#tree-life" data-resume="treeLifeButton"></a>
+              <a class="tree-life-button resume-cv-button" href="assets/CV_Steven_TOLOJANAHARY.pdf" data-resume="cvButton"></a>
+            </div>
+            <div class="resume-tabs" role="tablist" aria-label="Resume sections">
+              <button type="button" class="active" data-tab="experience" data-tab-key="experience"></button>
+              <button type="button" data-tab="education" data-tab-key="training"></button>
+              <button type="button" data-tab="skills" data-tab-key="skills"></button>
+              <button type="button" data-tab="about" data-tab-key="about"></button>
+            </div>
+          </aside>
+
+          <section class="resume-content">
+            <div class="resume-panel active" data-panel="experience">
+              <h2 data-resume="experienceTitle"></h2>
+              <p data-resume="experienceText"></p>
+              <div class="experience-list" data-experience-list></div>
+            </div>
+
+            <div class="resume-panel" data-panel="education">
+              <h2 data-resume="trainingTitle"></h2>
+              <p data-resume="trainingText"></p>
+              <div class="resume-cards training-cards" data-training-list></div>
+            </div>
+
+            <div class="resume-panel" data-panel="skills">
+              <h2 data-resume="skillsTitle"></h2>
+              <p data-resume="skillsText"></p>
+              <div class="skills-toolbox" data-skills-toolbox></div>
+            </div>
+
+            <div class="resume-panel" data-panel="about">
+              <h2 data-resume="aboutTitle"></h2>
+              <p data-resume="aboutText"></p>
+              <div class="about-board" data-about-table></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </template>
+
+    <template id="work-template">
+      <section class="page page-work">
+        <div class="container work-layout">
+          <div class="work-copy">
+            <strong class="project-number">01</strong>
+            <h2></h2>
+            <p></p>
+            <span class="tech-stack"></span>
+            <div class="work-line"></div>
+            <div class="work-links">
+              <a href="#" aria-label="Open project">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </a>
+              <a href="#contact" aria-label="Discuss project">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="work-preview">
+            <img src="assets/work/generated/self-assessment-system.png" alt="" />
+            <div class="slider-buttons" aria-label="Project controls">
+              <button type="button" data-work-prev aria-label="Previous project">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6" /></svg>
+              </button>
+              <button type="button" data-work-next aria-label="Next project">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="blog-template">
+      <section class="page page-blog">
+        <div class="container blog-layout">
+          <div class="blog-media">
+            <img src="assets/blog/accreditation-foundations.png" alt="" />
+          </div>
+          <div class="blog-copy">
+            <p class="eyebrow" data-blog-label></p>
+            <strong class="project-number blog-number">01</strong>
+            <h2></h2>
+            <p data-blog-description></p>
+            <span class="tech-stack blog-tags"></span>
+            <div class="work-line"></div>
+            <div class="blog-footer">
+              <a class="outline-button" href="#" aria-label="Read article">
+                <span data-blog-read></span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+              <div class="slider-buttons" aria-label="Blog controls">
+                <button type="button" data-blog-prev aria-label="Previous article">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6" /></svg>
+                </button>
+                <button type="button" data-blog-next aria-label="Next article">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="tree-life-template">
+      <section class="page page-tree-life tree-fresco-page">
+        <div class="tree-ink-path" aria-hidden="true">
+          <svg viewBox="0 0 1000 10500" preserveAspectRatio="none">
+            <path class="tree-ink-path-base" d="M500 180 Q520 400 480 750 T550 1400 T450 2100 T540 2900 T440 3700 T550 4500 T460 5300 T540 6100 T470 6900 T530 7700 T460 8500 T540 9300 Q500 9950 500 10200" />
+            <path class="tree-ink-path-active" data-tree-path d="M500 180 Q520 400 480 750 T550 1400 T450 2100 T540 2900 T440 3700 T550 4500 T460 5300 T540 6100 T470 6900 T530 7700 T460 8500 T540 9300 Q500 9950 500 10200" />
+          </svg>
+        </div>
+
+        <div class="container tree-fresco-hero">
+          <div class="tree-hero-copy">
+            <p class="eyebrow" data-tree="eyebrow"></p>
+            <h1 data-tree="title"></h1>
+            <div class="tree-actions">
+              <a class="outline-button" href="assets/Tree_Life_Steven_TOLOJANAHARY.pdf" data-tree="pdfButton"></a>
+              <a class="outline-button" href="#resume" data-tree="resumeButton"></a>
+            </div>
+            <p data-tree="lead"></p>
+          </div>
+          <div class="tree-enso-mark" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <circle class="ravinala-sun" cx="100" cy="95" r="72" />
+              <line class="ravinala-trunk" x1="100" y1="180" x2="100" y2="96" />
+              <path class="ravinala-leaf" d="M100 98 Q58 42 28 28 Q62 86 100 98" />
+              <path class="ravinala-leaf" d="M100 98 Q74 32 64 12 Q96 78 100 98" />
+              <path class="ravinala-leaf" d="M100 98 Q100 28 100 8 Q116 76 100 98" />
+              <path class="ravinala-leaf" d="M100 98 Q126 32 136 12 Q104 78 100 98" />
+              <path class="ravinala-leaf" d="M100 98 Q142 42 172 28 Q138 86 100 98" />
+              <circle class="interactive-circle" cx="100" cy="98" r="6" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="container tree-fresco-sections" data-tree-sections></div>
+
+        <div class="container tree-fresco-footer">
+          <a class="outline-button" href="#tree-life" data-tree-top></a>
+        </div>
+      </section>
+    </template>
+
+    <template id="contact-template">
+      <section class="page page-contact">
+        <div class="container contact-layout">
+          <form class="contact-card">
+            <h2 data-contact="title"></h2>
+            <p data-contact="text"></p>
+            <div class="field-row">
+              <input type="text" data-placeholder-key="firstName" />
+              <input type="text" data-placeholder-key="lastName" />
+            </div>
+            <div class="field-row">
+              <input type="email" data-placeholder-key="email" />
+              <input type="tel" data-placeholder-key="phone" />
+            </div>
+            <select aria-label="Select a service" data-contact-select></select>
+            <textarea data-placeholder-key="message"></textarea>
+            <button type="button" data-contact="button"></button>
+          </form>
+
+          <aside class="contact-info">
+            <div>
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11v7M8 8v.1M12 18v-7m0 3.5c0-2 1-3.5 3-3.5s3 1.4 3 3.5V18M4 18V6h16v12H4Z" /></svg>
+              </span>
+              <p>LinkedIn</p>
+              <strong>steven-tolojanahary</strong>
+            </div>
+            <div>
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4V6Zm0 1 8 6 8-6" /></svg>
+              </span>
+              <p>Email</p>
+              <strong>llucsteven@gmail.com</strong>
+            </div>
+            <div>
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z" /><path d="M12 10.5h.01" /></svg>
+              </span>
+              <p data-contact="locationLabel"></p>
+              <strong>Wattrelos, France</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
